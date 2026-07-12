@@ -109,9 +109,9 @@
     ov.innerHTML =
       '<div class="sepop" role="dialog" aria-modal="true" aria-label="An offer from Shopease Foods">' +
       '<button class="sepop-close" aria-label="Close">&times;</button>' +
-      '<p class="eyebrow">The Grocery Bill Challenge</p>' +
-      '<h3>Bring us your grocery bill. We build your plan to fit it.</h3>' +
-      '<p>Your Food Planner builds a year of your family\u2019s food to the number you already spend, price locked for three years, in writing. If we can\u2019t make your budget work, we\u2019ll tell you straight on the call.</p>' +
+      '<p class="eyebrow">The Full Freezer Guarantee</p>' +
+      '<h3>Your first order comes with $100 off. Consider this your invitation.</h3>' +
+      '<p>You pick every item. Priced to your budget in writing before you spend a dollar. Loved by your family or we replace it. Price locked three years. Complete the free consult and your <strong>$100 New Family Credit</strong> is applied to your first order.</p>' +
       '<div class="sepop-ctas">' +
       '<a class="btn btn-gold" href="' + BOOK + '">Book My Free Consult</a>' +
       '<a class="btn btn-ghost" href="survey.html">Take the 2-Minute Survey</a>' +
@@ -125,7 +125,7 @@
       '<label class="chk"><input type="checkbox" name="c1" required> You can text or email me about my request. (Required)</label>' +
       '<label class="chk"><input type="checkbox" name="c2"> Send me occasional offers and tips. Unsubscribe anytime.</label>' +
       '<button class="btn btn-gold" type="submit">Send Me the Family Freezer Plan</button>' +
-      '<p class="sepop-note">Free PDF guide. No spam, no pressure. Shopease Foods Inc., Peterborough ON.</p>' +
+      '<p class="sepop-note">Free PDF guide. New families only, one credit per household. Shopease Foods Inc., Peterborough ON.</p>' +
       '</form></div>';
     document.body.appendChild(ov);
     requestAnimationFrame(function(){ ov.classList.add('show'); });
@@ -150,7 +150,7 @@
         phone: f.phone.value.trim(),
         email: f.email.value.trim(),
         postal: '',
-        message: 'Website popup: requested The Family Freezer Plan guide (Grocery Bill Challenge).',
+        message: 'Website popup: claimed the $100 New Family Credit and requested The Family Freezer Plan guide.',
         consent_nonmkt: true,
         consent_mkt: !!f.c2.checked
       };
@@ -161,7 +161,7 @@
         '<button class="sepop-close" aria-label="Close">&times;</button>' +
         '<p class="eyebrow">You\u2019re all set</p>' +
         '<h3>Here\u2019s your Family Freezer Plan.</h3>' +
-        '<p>A Food Planner will reach out shortly. In the meantime, the guide is yours:</p>' +
+        '<p>Your $100 New Family Credit is noted, and a Food Planner will confirm it when they reach out. The guide is yours either way:</p>' +
         '<div class="sepop-ctas">' +
         '<a class="btn btn-gold" href="' + GUIDE + '" target="_blank" rel="noopener">Download the Guide (PDF)</a>' +
         '<a class="btn btn-ghost" href="survey.html">Take the 2-Minute Survey</a>' +

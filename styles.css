@@ -574,3 +574,14 @@ html.js .reveal[style*="--rd"]{transition-delay:var(--rd)}
 .sepop-ctas .btn{width:auto;flex:1}
 .sepop-note{font-size:.75rem;color:var(--ink-faint);margin-top:10px;text-align:center}
 @media (max-width:560px){.sepop{padding:28px 22px}.sepop-ctas{flex-direction:column}}
+
+/* ---------------- full freezer guarantee ---------------- */
+.ffg-list{list-style:none;max-width:640px;margin:2rem auto 0;padding:0}
+.ffg-list li{position:relative;padding:10px 0 10px 40px;color:rgba(251,248,241,.92);font-size:1.02rem;border-bottom:1px solid rgba(251,248,241,.12)}
+.ffg-list li:last-child{border-bottom:0}
+.ffg-list li:before{content:"\2713";position:absolute;left:8px;top:9px;color:var(--gold-soft);font-weight:800;font-size:1.1rem}
+.ffg-credit{color:rgba(251,248,241,.95);font-size:1.05rem;margin-top:1.6rem}
+.ffg-credit strong{color:var(--gold-soft)}
+.ffg-fine{color:rgba(251,248,241,.55);font-size:.78rem;margin-top:1rem}
+.payband .btn-ghost-light{margin-left:10px}
+@media (max-width:560px){.payband .btn-ghost-light{margin-left:0;margin-top:10px}}
