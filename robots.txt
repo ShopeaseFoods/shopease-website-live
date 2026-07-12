@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# AI assistants and answer engines are welcome — this helps customers
+# get accurate answers about Shopease Foods.
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.shopeasefoods.com/sitemap.xml

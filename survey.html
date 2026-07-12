@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Take the 2-Minute Survey — Shopease Foods</title>
+<meta name="description" content="Tell us how your family eats and we'll build a personalized food plan before your free consult. Takes about 2 minutes — no obligation, no payment info.">
+<link rel="canonical" href="https://www.shopeasefoods.com/survey.html">
+<meta property="og:title" content="Take the 2-Minute Survey — Shopease Foods">
+<meta property="og:description" content="Tell us how your family eats and we'll build your personalized food plan before your free consult.">
+<meta property="og:url" content="https://www.shopeasefoods.com/survey.html">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://shopease-web-uwyl.onrender.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/logo-210.png">
+<style>
+  /* ---- survey embed page ---- */
+  body{display:flex;flex-direction:column;min-height:100vh}
+  .survey-intro{background:#08251A;background:var(--green-deep);color:#FBF8F1;color:var(--cream);padding:30px 0 26px}
+  .survey-intro .eyebrow{color:var(--gold-soft);margin-bottom:.5rem}
+  .survey-intro h1{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--cream)}
+  .survey-intro h1 em{color:var(--gold-soft)}
+  .survey-intro p{color:rgba(251,248,241,.82);max-width:54ch;margin-top:.5rem;font-size:1.02rem}
+  .survey-stage{flex:1;background:var(--cream-deep);padding:26px 0 40px}
+  .survey-card{
+    max-width:1100px;margin:0 auto;background:var(--white);
+    border-radius:var(--radius-lg);box-shadow:var(--shadow-lift);
+    overflow:hidden;position:relative;min-height:760px;
+  }
+  .survey-frame{width:100%;height:78vh;min-height:760px;border:0;display:block}
+  .survey-loading{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:14px;
+    background:var(--white);color:var(--ink-soft);font-size:1rem;text-align:center;padding:0 24px;
+  }
+  .survey-loading.hide{display:none}
+  .spinner{
+    width:34px;height:34px;border-radius:50%;
+    border:3px solid var(--cream-deep);border-top-color:var(--gold);
+    animation:spin .8s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .survey-fallback{margin-top:14px;font-size:.92rem}
+  .survey-foot{text-align:center;color:var(--ink-faint);font-size:.9rem;margin-top:18px}
+  .survey-foot a{color:var(--green-soft);font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span class="topbar-item">Serving Ontario families since 1984</span>
+    <span class="topbar-links">
+      <a href="tel:18003613418">Toll-free (800) 361-3418</a>
+      <span class="dot">·</span>
+      <a href="tel:17057454242">Local (705) 745-4242</a>
+      <span class="dot">·</span>
+      <a href="sms:17053040080">Text (705) 304-0080</a>
+    </span>
+  </div>
+</div>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html#top">
+      <img src="assets/logo-210.png" srcset="assets/logo-420.png 2x" alt="Shopease Foods" width="92" height="69">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#food">Our Food</a>
+      <a href="index.html#how">How It Works</a>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="btn btn-gold" href="https://links.thinkrr.ai/widget/booking/PTESF2YVJpmEamD4VFZ0">Book Your Free Consult</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="survey-intro">
+  <div class="wrap">
+    <p class="eyebrow">Your 2-minute food-planning survey</p>
+    <h1>Tell us how your family eats &mdash; <em>we'll build the plan.</em></h1>
+    <p>A few quick questions, matched against hundreds of real Shopease orders, so your free consult starts with a plan instead of a pitch. No obligation &middot; no payment info.</p>
+  </div>
+</section>
+
+<section class="survey-stage">
+  <div class="wrap">
+    <div class="survey-card">
+      <div class="survey-loading" id="surveyLoading">
+        <div class="spinner" aria-hidden="true"></div>
+        <div>Loading your survey&hellip;</div>
+        <div class="survey-fallback">Taking a moment? <a href="https://shopease-web-uwyl.onrender.com/public/survey" target="_blank" rel="noopener">Open the survey in a new tab</a>.</div>
+      </div>
+      <iframe
+        class="survey-frame"
+        title="Shopease Foods food-planning survey"
+        src="https://shopease-web-uwyl.onrender.com/public/survey?embed=true"
+        loading="eager"
+        referrerpolicy="no-referrer-when-downgrade"
+        onload="document.getElementById('surveyLoading').classList.add('hide')"></iframe>
+    </div>
+    <p class="survey-foot">Prefer to talk it through? <a href="https://links.thinkrr.ai/widget/booking/PTESF2YVJpmEamD4VFZ0">Book a free consult</a> or <a href="sms:17053040080">text us (705) 304-0080</a>.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-base">
+    <span>© 2026 Shopease Foods Inc. All rights reserved.</span>
+    <span><a href="index.html">Home</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Service</a></span>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
+</body>
+</html>
