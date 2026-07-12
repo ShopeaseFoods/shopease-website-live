@@ -555,3 +555,22 @@ html.js .reveal[style*="--rd"]{transition-delay:var(--rd)}
 @media (max-width: 680px){
   .fab-text{display:inline-flex}
 }
+
+/* ---------------- lead popup ---------------- */
+.sepop-overlay{position:fixed;inset:0;background:rgba(8,37,26,.55);z-index:200;display:flex;align-items:center;justify-content:center;padding:18px;opacity:0;transition:opacity .3s ease}
+.sepop-overlay.show{opacity:1}
+.sepop{background:var(--cream);border-radius:var(--radius-lg);max-width:540px;width:100%;padding:38px 40px;position:relative;box-shadow:var(--shadow-lift);max-height:92vh;overflow:auto}
+.sepop .eyebrow{margin-bottom:6px}
+.sepop h3{font-family:var(--serif);font-weight:500;font-size:1.7rem;color:var(--green-deep);margin:0 0 10px;line-height:1.2}
+.sepop p{color:var(--ink-soft);font-size:.95rem;margin:0 0 14px}
+.sepop-close{position:absolute;top:14px;right:16px;background:none;border:0;font-size:26px;line-height:1;color:var(--ink-soft);cursor:pointer;padding:4px}
+.sepop-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.sepop-div{display:flex;align-items:center;gap:10px;color:var(--ink-faint);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;margin:14px 0}
+.sepop-div:before,.sepop-div:after{content:"";flex:1;height:1px;background:rgba(8,37,26,.15)}
+.sepop input[type=text],.sepop input[type=tel],.sepop input[type=email]{width:100%;padding:11px 13px;border:1px solid rgba(8,37,26,.2);border-radius:10px;font:inherit;margin-bottom:10px;background:var(--white)}
+.sepop label.chk{display:flex;gap:8px;align-items:flex-start;font-size:.8rem;color:var(--ink-soft);margin-bottom:8px}
+.sepop label.chk input{margin-top:2px}
+.sepop .btn{width:100%;justify-content:center;text-align:center}
+.sepop-ctas .btn{width:auto;flex:1}
+.sepop-note{font-size:.75rem;color:var(--ink-faint);margin-top:10px;text-align:center}
+@media (max-width:560px){.sepop{padding:28px 22px}.sepop-ctas{flex-direction:column}}
