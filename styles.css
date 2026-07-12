@@ -585,3 +585,8 @@ html.js .reveal[style*="--rd"]{transition-delay:var(--rd)}
 .ffg-fine{color:rgba(251,248,241,.55);font-size:.78rem;margin-top:1rem}
 .payband .btn-ghost-light{margin-left:10px}
 @media (max-width:560px){.payband .btn-ghost-light{margin-left:0;margin-top:10px}}
+
+/* freezer tour video + popup spacing fix */
+.why-photo video{width:100%;height:auto;display:block;border-radius:var(--radius-lg);box-shadow:var(--shadow-lift)}
+.why-photo figcaption{font-size:.85rem;color:var(--ink-faint);margin-top:10px}
+.sepop-overlay{z-index:1200;padding:32px 18px}
