@@ -98,7 +98,7 @@
     if (ts && (Date.now() - ts) < 7 * 24 * 3600 * 1000) return;
   } catch (e) { return; }
 
-  var BOOK = 'https://api.leadconnectorhq.com/widget/booking/PTESF2YVJpmEamD4VFZ0';
+  var BOOK = 'https://link.shopeasefoods.com/widget/booking/PTESF2YVJpmEamD4VFZ0';
   var GUIDE = 'assets/Shopease_Family_Freezer_Plan.pdf';
   var API = 'https://shopease-web-uwyl.onrender.com/api/public/contact';
   var shown = false, readyAt = Date.now() + 15000;
