@@ -47,7 +47,7 @@ h3{font-size:1.2rem;font-weight:600;line-height:1.32}
 .light-p{color:rgba(251,248,241,.85);max-width:48ch}
 .light-p strong{color:var(--gold-soft)}
 .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--green-soft);margin-bottom:1.05rem}
-.eyebrow.gold{color:var(--gold-soft)}
+.eyebrow.gold{color:var(--gold)}
 .lede{font-size:1.17rem;color:var(--ink-soft);max-width:36em;margin-top:.6rem}
 .section-sub{font-size:1.07rem;color:var(--ink-soft);max-width:46em;margin:0 auto 12px}
 .center .section-sub{margin-left:auto;margin-right:auto}
