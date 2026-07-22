@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Your Food Plan | Shopease Foods</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .plan-wrap { max-width: 560px; margin: 90px auto; text-align: center; padding: 0 20px; }
+  .plan-wrap h1 { font-size: 1.6rem; margin-bottom: 12px; }
+  .plan-wrap p { color: #555; line-height: 1.6; }
+  .plan-spinner { margin: 28px auto 20px; width: 44px; height: 44px; border: 4px solid #e8e0cf;
+    border-top-color: #C2A773; border-radius: 50%; animation: ps 0.9s linear infinite; }
+  @keyframes ps { to { transform: rotate(360deg); } }
+  .plan-fallback { margin-top: 22px; font-size: 0.95rem; }
+  .plan-fallback a { color: #1b5e20; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="plan-wrap">
+  <img src="assets/logo.png" alt="Shopease Foods" style="max-width:220px; margin-bottom:8px"
+       onerror="this.style.display='none'">
+  <div class="plan-spinner"></div>
+  <h1>Your food plan is opening</h1>
+  <p>One second while we bring up your personalized Shopease Foods plan.</p>
+  <p class="plan-fallback" id="fallback" style="display:none">
+    If it did not open, <a id="direct" href="#">tap here to view your plan</a>.
+  </p>
+  <p style="margin-top:34px; font-size:0.85rem; color:#888">
+    Shopease Foods Inc. &middot; 7-774 Rye Street, Peterborough ON &middot; 705-745-4242<br>
+    When it comes to food, we deliver.
+  </p>
+</div>
+<script>
+  (function () {
+    var q = new URLSearchParams(window.location.search);
+    var o = (q.get("o") || "").replace(/[^0-9]/g, "");
+    var t = (q.get("t") || "").replace(/[^a-f0-9]/gi, "");
+    if (!o || !t) { document.querySelector("h1").textContent = "This link is missing its plan code."; return; }
+    var url = "https://shopease-api-sp03.onrender.com/api/public/quote-pdf/" + o + "/" + t;
+    document.getElementById("direct").href = url;
+    setTimeout(function () { document.getElementById("fallback").style.display = "block"; }, 2500);
+    window.location.replace(url);
+  })();
+</script>
+</body>
+</html>
